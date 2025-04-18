@@ -1,4 +1,3 @@
-# api-full-stack-java-angular
 # Barber-Shop-FullStack  
 
 🚀 Projeto Full Stack para gestão de barbearias com:  

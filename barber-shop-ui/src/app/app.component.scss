@@ -1,0 +1,69 @@
+/* Container principal da aplicação */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+
+  /* Conteúdo principal */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Responsividade para mobile */
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+}
+
+/* Rodapé */
+.app-footer {
+  background: #3f51b5;
+  color: white;
+  padding: 1rem 0;
+  margin-top: auto; /* Fixa o footer na base */
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+
+    /* Layout para desktop */
+    @media (min-width: 600px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    /* Texto do rodapé */
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Links do rodapé */
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: color 0.3s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

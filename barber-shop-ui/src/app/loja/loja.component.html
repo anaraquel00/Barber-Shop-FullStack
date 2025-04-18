@@ -1,0 +1,11 @@
+<h1>Nossa Loja</h1>
+<p>Conheça nossos produtos e serviços.</p>
+<div class="product-list">
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.imageUrl" alt="{{ product.name }}" />
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p class="price">R$ {{ product.price | number: '1.2-2' }}</p>
+    <button mat-raised-button color="primary">Adicionar ao Carrinho</button>
+  </div>
+</div>

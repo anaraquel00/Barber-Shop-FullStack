@@ -1,0 +1,39 @@
+<mat-card class="product-form-card">
+  <mat-card-header>
+    <mat-card-title>{{ isEdicao ? 'Editar Produto' : 'Novo Produto' }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()" #produtoForm="ngForm">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput name="nome" [(ngModel)]="produto.nome" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Preço</mat-label>
+        <input matInput name="preco" [(ngModel)]="produto.preco" required type="number">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <textarea matInput name="descricao" [(ngModel)]="produto.descricao" required></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Estoque</mat-label>
+        <input matInput name="estoque" [(ngModel)]="produto.estoque" required type="string">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+        <input matInput name="categoria" [(ngModel)]="produto.categoria" required>
+      </mat-form-field>
+      <!-- Adicione os outros campos (preco, descricao, estoque, categoria) -->
+
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!produtoForm.valid">
+          {{ isEdicao ? 'Atualizar' : 'Salvar' }}
+        </button>
+        <button mat-raised-button type="button" (click)="cancelar()">Cancelar</button>
+      </div>
+    </form>
+  </mat-card-content>
+
+</mat-card>

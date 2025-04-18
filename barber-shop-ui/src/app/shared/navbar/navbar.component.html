@@ -1,0 +1,61 @@
+<!-- navbar.component.html -->
+<mat-toolbar color="primary" class="mat-elevation-z4">
+  <!-- Logo/Título -->
+  <div class="branding" routerLink="/">
+    <mat-icon class="logo-icon">content_cut</mat-icon>
+    <span class="brand-name">BarberShop UI</span>
+  </div>
+
+  <!-- Links de Navegação (Desktop) -->
+  <div class="nav-links hide-on-mobile">
+    <a mat-button routerLink="/"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: true}">
+      <mat-icon>home</mat-icon>
+      Pagina principal
+    </a>
+    <a mat-button routerLink="/produtos"
+       routerLinkActive="active">
+      <mat-icon>products</mat-icon>
+      Produtos
+    </a>
+    <a mat-button routerLink="/loja"
+    routerLinkActive="active">
+     <mat-icon>loja</mat-icon>
+     Loja
+    </a>
+    <a mat-button routerLink="/sobre"
+       routerLinkActive="active">
+      <mat-icon>about</mat-icon>
+      Sobre
+    </a>
+
+    <!-- Adicione mais links conforme necessário -->
+  </div>
+
+  <!-- Menu Mobile -->
+  <button mat-icon-button
+          class="hide-on-desktop"
+          [matMenuTriggerFor]="mobileMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #mobileMenu="matMenu">
+    <button mat-menu-item routerLink="/">
+      <mat-icon>home</mat-icon>
+      <span>Pagina principal</span>
+    </button>
+    <button mat-menu-item routerLink="/produtos">
+      <mat-icon>products</mat-icon>
+      <span>Produtos</span>
+    </button>
+    <button mat-menu-item routerLink="/loja">
+      <mat-icon>loja</mat-icon>
+      <span>Loja</span>
+    </button>
+    <button mat-menu-item routerLink="/contato">
+      <mat-icon>sobre</mat-icon>
+      <span>Sobre</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

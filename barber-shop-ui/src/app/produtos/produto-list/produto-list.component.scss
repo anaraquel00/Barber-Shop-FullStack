@@ -1,0 +1,36 @@
+app-produto-list {
+  display: block;
+  padding: 20px;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+      margin: 0;
+      color: #333;
+    }
+  }
+
+  .add-button {
+    background-color: #d4af37; /* Dourado */
+    color: white;
+
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+
+  /* Tabela */
+  table {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Linhas alternadas */
+    mat-row:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+}

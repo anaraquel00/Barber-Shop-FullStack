@@ -1,0 +1,22 @@
+<!-- app.component.html -->
+<div class="app-container">
+  <!-- Barra de navegação -->
+  <app-navbar></app-navbar>
+
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Rodapé (opcional) -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p>BarberShop UI © {{ currentYear }} - Todos os direitos reservados</p>
+      <div class="footer-links">
+        <a mat-button href="/politica-privacidade">Política de Privacidade</a>
+        <a mat-button href="/termos-uso">Termos de Uso</a>
+      </div>
+    </div>
+  </footer>
+</div>

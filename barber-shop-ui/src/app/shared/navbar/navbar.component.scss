@@ -1,0 +1,62 @@
+/* navbar.component.scss */
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  .branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    .logo-icon {
+      color: #ffd740; /* Cor dourada para contrastar */
+    }
+
+    .brand-name {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      text-decoration: none;
+
+      &.active {
+        background: rgba(255, 215, 64, 0.2); /* Fundo dourado claro */
+        border-radius: 4px;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  /* Responsividade */
+  .hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  .hide-on-desktop {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
